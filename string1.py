@@ -70,7 +70,9 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
   # +++your code here+++
-  return
+mix_char_a = b[:2] + a[2:]
+  mix_char_b = a[:2] + b[2:]
+  return mix_char_a + '' + mix_char_b
 
 
 # Provided simple test() function used in main() to print
@@ -119,3 +121,4 @@ def main():
 # Standard boilerplate to call the main() function.
 if __name__ == '__main__':
   main()
+
