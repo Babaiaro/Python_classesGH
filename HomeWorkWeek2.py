@@ -37,10 +37,32 @@ elif menu == "Italian":
 else:
     print(" ")
 
+# This is the 4 week task
+# i would like to add here if they want to split the payment
+# and if they added 20%< tips i will print  "Thank you for your generosity!"
+# also there i need to ask their names to receipt
+# add show there how much are they gonna pay
+
+
 
 if cost_of_meal > 0:
+    # here i need to ask if they want to split the payment
+    split_payment = input("Would you like to split payment? ")
+    if split_payment == "Yes":
+        number_to_split = float(input("how many do i need to split? "))
+        # print(number_to_split)
+        # split_payment.count(number_to_split)
+        names_for_receipts = input("May i know names for check? ")
+        # print(names_for_receipts)
+
+
+
+
     # here i use formula of calculation of percentage
     tip_percentage = float(input("Enter the tip percentage \n: "))
+
     tip_amount= tip_percentage * cost_of_meal/100
-    total = cost_of_meal + tip_amount
-    print(recipient_name, "your total is", total)
+    if tip_percentage <= 20: print("Thank you for your generosity!")
+    total= cost_of_meal + tip_amount
+    total = total / number_to_split
+    print(names_for_receipts, "total is", total, "for each")
