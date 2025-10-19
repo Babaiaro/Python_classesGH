@@ -145,6 +145,7 @@ if __name__ == '__main__':
       return ""
     else:
       return s[2:]+s[:-2]
+  # there are it have been written about ther position on the deal in words 
  
 
 
@@ -328,5 +329,6 @@ if __name__ == '__main__':
 
   if __name__ == '__main__':
     main()
+
 
 
