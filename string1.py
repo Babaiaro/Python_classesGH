@@ -122,3 +122,211 @@ def main():
 if __name__ == '__main__':
   main()
 
+  # ==============================================================
+  # Google-Style String Practice 2
+  # Each task has:
+  #   - description in comments
+  #   - your code placeholder
+  #   - expected outputs for testing
+  # ==============================================================
+
+  # --------------------------------------------------------------
+  # A. first_last_two
+  # Task:
+  #   Return a string made of the first 2 and last 2 chars.
+  #   If the string length < 2, return ''.
+  # Example:
+  #   first_last_two('spring') → 'spng'
+  #   first_last_two('a') → ''
+  # Expected outputs in tests below.
+  def first_last_two(s):
+    # +++ your code here +++
+    if len(s) <2:
+      return ""
+    else:
+      return s[2:]+s[:-2]
+ 
+
+
+  # --------------------------------------------------------------
+  # B. count_hi
+  # Task:
+  #   Count how many times 'hi' appears in the string (non-overlapping).
+  # Example:
+  #   count_hi('hihi') → 2
+  #   count_hi('hello hi') → 1
+  def count_hi(s):
+    # +++ your code here +++
+    return 0
+
+
+  # --------------------------------------------------------------
+  # C. ends_same
+  # Task:
+  #   Return True if the string starts and ends with the same 2 characters.
+  # Example:
+  #   ends_same('edited') → True
+  #   ends_same('coding') → False
+  def ends_same(s):
+    # +++ your code here +++
+    return False
+
+
+  # --------------------------------------------------------------
+  # D. remove_middle
+  # Task:
+  #   Remove all occurrences of a given character (c) from the middle of the string,
+  #   keeping the first and last occurrence (if they exist).
+  # Example:
+  #   remove_middle('abracadabra','a') → 'abracada bra'.replace(' ', '')
+  #   remove_middle('xxxyxx','x') → 'x y x'.replace(' ', '')
+  def remove_middle(s, c):
+    # +++ your code here +++
+    return s
+
+
+  # --------------------------------------------------------------
+  # E. front_back_swap
+  # Task:
+  #   Given strings a and b, swap the first 2 characters of each,
+  #   return '<new_a> <new_b>'.
+  # Example:
+  #   front_back_swap('mix','pod') → 'pox mid'
+  #   front_back_swap('dog','dinner') → 'dig donner'
+  def front_back_swap(a, b):
+    # +++ your code here +++
+    return ''
+
+
+  # --------------------------------------------------------------
+  # F. x_balance
+  # Task:
+  #   Move all 'x' characters to the end of the string,
+  #   keeping other characters in their original order.
+  # Example:
+  #   x_balance('xxabxc') → 'ab c xxx'.replace(' ','')
+  #   x_balance('xyz') → 'yzx'
+  def x_balance(s):
+    # +++ your code here +++
+    return ''
+
+
+  # --------------------------------------------------------------
+  # G. repeat_sep
+  # Task:
+  #   Return word repeated n times, separated by sep.
+  # Example:
+  #   repeat_sep('Hi','-',3) → 'Hi-Hi-Hi'
+  #   repeat_sep('A','*',1) → 'A'
+  def repeat_sep(word, sep, n):
+    # +++ your code here +++
+    return ''
+
+
+  # --------------------------------------------------------------
+  # H. middle_out
+  # Task:
+  #   Remove the middle character(s) from a string.
+  #   - Remove 1 char if length is odd
+  #   - Remove 2 chars if length is even
+  # Example:
+  #   middle_out('abc') → 'ac'
+  #   middle_out('code') → 'ce'
+  def middle_out(s):
+    # +++ your code here +++
+    return ''
+
+
+  # --------------------------------------------------------------
+  # I. is_palindrome_clean
+  # Task:
+  #   Return True if the string is a palindrome,
+  #   ignoring spaces and case.
+  # Example:
+  #   is_palindrome_clean('Race car') → True
+  #   is_palindrome_clean('hello') → False
+  def is_palindrome_clean(s):
+    # +++ your code here +++
+    return False
+
+
+  # --------------------------------------------------------------
+  # J. compress_basic
+  # Task:
+  #   Return a run-length encoding string:
+  #   'aaabbc' → 'a3b2c1'
+  #   'abcd' → 'a1b1c1d1'
+  def compress_basic(s):
+    # +++ your code here +++
+    return ''
+
+
+  # --------------------------------------------------------------
+  # Testing helper
+  def test(got, expected):
+    if got == expected:
+      prefix = ' OK '
+    else:
+      prefix = '  X '
+    print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
+
+
+  # --------------------------------------------------------------
+  # Test runner
+  def main():
+    print('first_last_two')
+    test(first_last_two('spring'), 'spng')
+    test(first_last_two('Hello'), 'Helo')
+    test(first_last_two('a'), '')
+    test(first_last_two('xy'), 'xyxy')
+
+    print('\ncount_hi')
+    test(count_hi('hihi'), 2)
+    test(count_hi('hi there, hiii'), 2)
+    test(count_hi('abc'), 0)
+
+    print('\nends_same')
+    test(ends_same('edited'), True)
+    test(ends_same('coding'), False)
+    test(ends_same('aa'), True)
+
+    print('\nremove_middle')
+    test(remove_middle('abracadabra', 'a'), 'abracadabra'.replace('a', '', 2))  # for reference
+    test(remove_middle('xxxyxx', 'x'), 'x y x'.replace(' ', ''))
+    test(remove_middle('hello', 'z'), 'hello')
+
+    print('\nfront_back_swap')
+    test(front_back_swap('mix', 'pod'), 'pox mid')
+    test(front_back_swap('dog', 'dinner'), 'dig donner')
+    test(front_back_swap('gnash', 'sport'), 'spash gnort')
+
+    print('\nx_balance')
+    test(x_balance('xxabxc'), 'ab c xxx'.replace(' ', ''))
+    test(x_balance('xyz'), 'yzx')
+    test(x_balance('abc'), 'abc')
+
+    print('\nrepeat_sep')
+    test(repeat_sep('Hi', '-', 3), 'Hi-Hi-Hi')
+    test(repeat_sep('A', '*', 1), 'A')
+    test(repeat_sep('yo', '_', 4), 'yo_yo_yo_yo')
+
+    print('\nmiddle_out')
+    test(middle_out('abc'), 'ac')
+    test(middle_out('code'), 'ce')
+    test(middle_out('a'), '')
+
+    print('\nis_palindrome_clean')
+    test(is_palindrome_clean('Never odd or even'), True)
+    test(is_palindrome_clean('Race car'), True)
+    test(is_palindrome_clean('hello'), False)
+
+    print('\ncompress_basic')
+    test(compress_basic('aaabbc'), 'a3b2c1')
+    test(compress_basic('abcd'), 'a1b1c1d1')
+    test(compress_basic(''), '')
+
+
+  if __name__ == '__main__':
+    main()
+
+
