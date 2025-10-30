@@ -8,9 +8,9 @@ print("Hello To-Do list")
 todo = []
 while True:
 
-    # print("Hello To-Do list")
-    # for loop, tasks in enumerate(todo , 1):
-    #     print(f"{loop}.{tasks}")
+    print("Hello To-Do list")
+    for loop, tasks in enumerate(todo , 1):
+        print(f"{loop}.{tasks}")
 
     besh = input("\n\nYour next action is : \n1.Add a new task. \n2.View all tasks.\n3.Delete a task.\n4.Quit \n :")
 
@@ -33,4 +33,5 @@ while True:
         break
     else :
         print (" There is something wrong")
+
 
