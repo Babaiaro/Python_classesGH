@@ -18,15 +18,25 @@
 # # s = len(sentences)
 # # print(s)
 
-def countWord(input_string):
-    d = {}
-    for word in input_string:
-        try:
-            d[word] += 1
-        except:
-            d[word] = 1
 
-    for k in d.keys():
-        print ("%s: %d" % (k, d[k]))
-print (countWord("Hello I am going to I with Hello am"))
+# Ask the user for a sentence
+sentence = input("Enter a sentence: ")
+
+# Convert the sentence to lowercase and split into words
+words = sentence.lower().split()
+
+# Create an empty dictionary to store word counts
+word_count = {}
+
+# Count occurrences of each word
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+# Display the result
+print("Word count:", word_count)
+
+
 
