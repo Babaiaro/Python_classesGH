@@ -14,6 +14,10 @@ while True:
 
             elif a == "n":
                 break
+            else 
+                 print("OLA")
+                        
+
 
 
 
